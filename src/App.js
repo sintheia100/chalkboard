@@ -17,7 +17,7 @@ const App = () => {
     <Router>
       <Header />
       <hr className='header-divider' />
-      <Routes basename='/'>
+      <Routes basename='/React'>
         <Route path='/' element={<HomePage />} />
         <Route path='login' element={<Login />} />
 
