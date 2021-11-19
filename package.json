@@ -2,7 +2,7 @@
   "name": "chalkboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chalkboard1-5dbc1aobg-sintheia100.vercel.app/",
+  "homepage": "chalkboard1.vercel.app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
