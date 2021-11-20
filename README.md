@@ -1,6 +1,6 @@
 # Chalkboard
 
-[Website Link](chalkboard1.vercel.app)
+[Website Link](https://webapp-eosin.vercel.app/)
 
 ### Team Member: Sintheia Jerin Chowdhury
 
