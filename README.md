@@ -2,10 +2,10 @@
 
 [Website Link](chalkboard1.vercel.app)
 
-### Team Members
+### Team Member: Sintheia Jerin Chowdhury
 
 
-### Contributions
+### Contribution: 
 
 
 
