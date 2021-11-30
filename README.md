@@ -1,7 +1,8 @@
 # Chalkboard
 
-[Website Link](https://webapp-eosin.vercel.app/)
+[Website Link - Deployed on Vercel](https://chalkboard-frontend.vercel.app/) 
 
+[Backend Link - Deployed on Heroku](https://chalkboard-api.herokuapp.com/)
 ### Team Member: Sintheia Jerin Chowdhury
 
 
@@ -18,6 +19,7 @@
  password: 0000
  ```
  - All Routes
+ - Redirects are included incase of user is logged in or not.
  ```
  / (Home Page)
  /browse (Browse Courses Screen)
@@ -32,7 +34,9 @@
  
  ```
  `/login/student` for student
+ 
  `/login/instructor` for instructors
+ 
  - Instructor Dashboard with information related to total enrolled students and course instructing 
  `/instructor/dashboard` (You need to login first on instructor page)
  
@@ -52,10 +56,53 @@
 React js is a frontend javaScript Library developed by Facebook.
 
 ## Backend Technologies
-yet to decide
+For backend, we have used the nodejs and express while database is MongoDb.
 
+[Backend can be find on this link](https://chalkboard-api.herokuapp.com/)
+
+### User management
+Their are two users in the web app, student and instructor. Both perform different actions due to their roll. So, both users will be managed differently
+#### For Students
+
+```
+
+GET (all users) - https://chalkboard-api.herokuapp.com/users
+GET (single user) - https://chalkboard-api.herokuapp.com/users/{user email}
+POST - https://chalkboard-api.herokuapp.com/users/add_user
+```
+#### For Instructors
+
+```
+GET (all instructor) - https://chalkboard-api.herokuapp.com/instructors
+GET (single instructor) - https://chalkboard-api.herokuapp.com/instructors/{user email}
+POST - https://chalkboard-api.herokuapp.com/instructors/add
+```
 ## Database Management System
-yet to decide
+For this project, we have used the MongoDb, noSQL Database.
+
+### Students
+We have implemented all the features, document required i.e first name, last name, email and password. But as student will carry more than that data. Student collection will contain the array of Enrolled Courses and Requested Courses which they requested for enrollement.
+```
+firstName : String,
+lastName: String,
+email : String,
+password : String,
+enrolledCourses: Array - reference from Courses and Instructors Model,
+requestedCourses: Array - reference from Courses Model,
+```
+
+### Instructors
+For instructor, we have added the same features as required and also the courses, instructor will teach, list of enrolled students and list of requested Courses
+```
+firstName : String,
+lastName: String,
+email : String,
+password : String,
+courses: Array - reference from Courses Model,
+requestedCourses: Array - reference from Courses and Users Model,
+enrolledStudents: Array - reference from Users Model
+```
+
 
 ## Visual Design
 [Link to Visual Designs](https://github.com/Stringbuilder101/chalkboard)
