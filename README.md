@@ -12,42 +12,55 @@
 
 
 ## Application Features
+ - ### Admin View
+ ```
+ /admin
+ ```
 
  -  Separete Login for Students and Instructors
- ```
- email: dummy1@email.com
- password: 0000
- ```
- - All Routes
+ -  User will be redirected to their specific dashboard based on their roles
  - Redirects are included incase of user is logged in or not.
+   - If Logged In, user tries to direct open the sign in or sign up link, user will be redirected to dashboard
+   - User can not access dashboard if not logged in.
+
+  -  ### Routes
+  ###### For Home Page
  ```
- / (Home Page)
- /browse (Browse Courses Screen)
+ / 
+ ```
+ ###### For Browsing and Searching the courses
+ ```
+ /browse 
  /browse/:id (Course Screen after clicking any of course)
+ ```
+ ###### For Login ( as Student or Instructor)
+ ```
  /login (Select Login for student or instructor)
- /login/student (Login as a student)
- /login/instructor (Login as instructor)
- /:userId/dashboard (User will be redirected here after logging in to student)
- /:user/instructor/dashboard (User will be redirected here after logging in to instructor)
+ /login/student 
+ /login/instructor 
+ ```
+ ###### Dashboard
+ - Only accessible if user has account logged in
+ - For Student
+   - Student Dashboard with information related to enrolled courses and requested for enrollement
+ ```
+ /:userId/dashboard
+ ```
+ - For Instructor
+   - Instructor Dashboard with information related to total enrolled students and course instructing
+ ```
+ /:user/instructor/dashboard
+ ```
+ 
+ ###### Assignments
+ ```
  /:user/dashboard/assignments (Assignments Page)
  /:user/assignments/:assignmentId (User can see course assignment if logged In) 
  
- ```
- `/login/student` for student
- 
- `/login/instructor` for instructors
- 
- - Instructor Dashboard with information related to total enrolled students and course instructing 
- `/instructor/dashboard` (You need to login first on instructor page)
- 
- - Student Dashboard with information related to enrolled courses and requested for enrollement
- `/:userId/dashboard`
- - Users can view all their assignments by going to link attached in sidebar
- `/:userId/assignments`
+ ``` 
+ - Users can view all their assignments by going to link attached in sidebar  `/:userId/assignments`
  - Users can go to the course and view separate assignments related to course
-  `/browse/:courseId/`  (if enrolled - todo)
- - Users can attempt to solve the assignment questions or upload the image or pdf file as answer. User can submit or save as draft
- `/assignments/:assignmentId`
+ - Users can attempt to solve the assignment questions or upload the image or pdf file as answer. User can submit or save as draft `/assignments/:assignmentId`
 
 
 ## Frontend Technologies 
